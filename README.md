@@ -10,10 +10,13 @@ Rather than relying on large cloud infrastructure, this system uses **two Raspbe
 ---
 
 ## 🎯 Key Concepts Demonstrated
-- **Replication** - Data is written to multiple nodes to ensure durability  
-- **Fault Tolerance** - The system continues to operate when a node fails  
-- **Eventual Consistency** - Replicas converge over time after failures  
-- **Observability** - System behavior is visible through metrics and dashboards  
+- Horizontal scaling using multiple nodes
+- Data replication with Apache Cassandra
+- Fault tolerance and node failure simulation
+- Heartbeat-based node liveness detection
+- Eventual consistency
+- Separation of data plane (Cassandra) and control plane (heartbeats)
+- Observability through a real-time dashboard
 
 ---
 
@@ -84,12 +87,15 @@ This project goes further:
 ---
 
 ## 📚 Technologies Used
-- Apache Cassandra
-- Java (Spring Boot)
-- React + TypeScript
-- Raspberry Pi
-- Temperature Sensor
-- REST APIs
+- Apache Cassandra (distributed database)
+- Java + Spring Boot (REST APIs)
+- React + TypeScript (frontend dashboard)
+- Recharts (data visualization)
+- Raspberry Pi 4 (2 nodes)
+- DS18B20 temperature sensor
+- Docker & Docker Compose
+- Python (sensor reader & heartbeat scripts)
+- Switch & Ethernet cables
 
 ---
 
