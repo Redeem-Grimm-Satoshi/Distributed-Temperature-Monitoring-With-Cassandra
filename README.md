@@ -26,7 +26,7 @@ Rather than relying on large cloud infrastructure, this system uses **two Raspbe
 - **Seed Node (Raspberry Pi 1)**  
   - Connected to a temperature sensor  
   - Acts as the initial Cassandra seed node  
-  - Publishes sensor data to the backend  
+  - Publishes sensor data to the backend REST API  
 
 - **Peer Node (Raspberry Pi 2)**  
   - Participates in Cassandra replication  
