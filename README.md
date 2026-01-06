@@ -84,7 +84,7 @@ Most distributed systems tutorials stop at “it works.”
 This project goes further:
 - It **expects failure**
 - It **embraces imperfect networks**
-- It shows how **production systems are designed to survive**, not avoid, failure
+- It shows how **production systems are designed to survive**, not avoid failure
 
 ---
 
