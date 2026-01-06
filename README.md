@@ -71,7 +71,7 @@ Rather than relying on large cloud infrastructure, this system uses **two Raspbe
 
 ## 🎤 Live Presentations
 This project was presented as a **live lightning talk/demo** at:
-- **Community Over Code 2025**
+- **Community Over Code 2025, Minneapolis, Minnesota.**
 - **PyData Boston 2025**
 
 The demo showcased how **distributed systems behave under node failures**, using real hardware, real data, and real infrastructure components.
