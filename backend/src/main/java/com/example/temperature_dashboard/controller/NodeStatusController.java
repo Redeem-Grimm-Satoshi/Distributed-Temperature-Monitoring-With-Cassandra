@@ -16,6 +16,7 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 public class NodeStatusController {
 
+    // Repository for NodeStatus entities
     private final NodeStatusRepository repo;
 
     public record StatusDto(String ipAddress, String nodeName, Instant lastSeen, boolean online) {}
