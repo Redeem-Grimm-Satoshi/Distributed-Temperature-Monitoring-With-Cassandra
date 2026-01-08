@@ -1,4 +1,6 @@
 
+<img width="1919" height="1079" alt="Screenshot 2025-09-08 125856" src="https://github.com/user-attachments/assets/81f3bbd2-b601-4c91-a6f3-9e7df63a3c7e" />
+
 # Distributed Systems Demo with Apache Cassandra & Raspberry Pi
 
 ## 📌 Overview
@@ -24,9 +26,9 @@ Rather than relying on large cloud infrastructure, this system uses **two Raspbe
 
 ### Components
 - **Seed Node (Raspberry Pi 1)**  
-  - Connected to a temperature sensor  
+  - Connected to a wired temperature sensor  
   - Acts as the initial Cassandra seed node  
-  - Publishes sensor data to the backend  
+  - Publishes sensor data to the backend REST API  
 
 - **Peer Node (Raspberry Pi 2)**  
   - Participates in Cassandra replication  
@@ -69,7 +71,7 @@ Rather than relying on large cloud infrastructure, this system uses **two Raspbe
 
 ## 🎤 Live Presentations
 This project was presented as a **live lightning talk/demo** at:
-- **Community Over Code 2025**
+- **Community Over Code 2025, Minneapolis, Minnesota.**
 - **PyData Boston 2025**
 
 The demo showcased how **distributed systems behave under node failures**, using real hardware, real data, and real infrastructure components.
@@ -82,7 +84,7 @@ Most distributed systems tutorials stop at “it works.”
 This project goes further:
 - It **expects failure**
 - It **embraces imperfect networks**
-- It shows how **production systems are designed to survive**, not avoid, failure
+- It shows how **production systems are designed to survive**, not avoid failure
 
 ---
 
