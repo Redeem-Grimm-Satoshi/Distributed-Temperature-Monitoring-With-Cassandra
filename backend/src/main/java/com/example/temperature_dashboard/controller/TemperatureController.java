@@ -14,6 +14,7 @@ import java.util.UUID;
 @RequestMapping("/api/temperatures")
 public class TemperatureController {
 
+    // Handles REST operations for temperature readings.
     private final TemperatureRepository repository;
 
     public TemperatureController(TemperatureRepository repository) {
@@ -23,9 +24,9 @@ public class TemperatureController {
     // Get all readings
     @GetMapping(produces = "application/json")
     public List<TemperatureReading> getAllReadings() {
-
         List<TemperatureReading> readings = repository.findAll();
 
+        // Mark nodes as offline if their last reading is stale.
         Instant now = Instant.now();
         for (TemperatureReading r : readings) {
             // If no update in last 60s, mark as offline
@@ -41,6 +42,7 @@ public class TemperatureController {
     // Insert new reading
     @PostMapping
     public TemperatureReading addReading(@RequestBody TemperatureReading reading) {
+        // Ensure a unique ID and set the server-side timestamp before saving.
         if (reading.getId() == null) {
             reading.setId(UUID.randomUUID().toString());
         }
@@ -48,6 +50,7 @@ public class TemperatureController {
         return repository.save(reading);
     }
 
+    // Simple health check endpoint.
     @GetMapping("/test") 
     public String test() { return "Controller is working!"; }
 }

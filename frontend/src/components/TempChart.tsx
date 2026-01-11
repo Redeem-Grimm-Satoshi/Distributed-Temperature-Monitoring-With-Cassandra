@@ -13,19 +13,23 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
+// Shape of the chart data expected by Recharts.
 type ChartData = {
   time: string;
   node1: number | null;
   node2: number | null;
 };
 
+// Props allow switching between multiple chart presentations.
 type TempChartProps = {
   data: ChartData[];
-  style?: "line" | "area" | "minimal"; // NEW prop
+  // Select the chart rendering style.
+  style?: "line" | "area" | "minimal";
 };
 
 export default function TempChart({ data, style = "line" }: TempChartProps) {
   if (style === "area") {
+    // Area chart with gradient fills for each node series.
     // 🔹 Area Chart with gradient fills
     return (
       <div className="p-6 bg-white rounded-2xl shadow-lg border border-gray-100">
@@ -34,6 +38,7 @@ export default function TempChart({ data, style = "line" }: TempChartProps) {
         </h2>
         <ResponsiveContainer width="100%" height={350}>
           <AreaChart data={data}>
+            {/* Gradient definitions referenced by the area fills. */}
             <defs>
               <linearGradient id="colorNode1" x1="0" y1="0" x2="0" y2="1">
                 <stop offset="5%" stopColor="#ef4444" stopOpacity={0.8} />
@@ -58,6 +63,7 @@ export default function TempChart({ data, style = "line" }: TempChartProps) {
   }
 
   if (style === "minimal") {
+    // Minimalist sparkline style for compact displays.
     // 🔹 Minimalist sparkline style
     return (
       <div className="p-6 bg-white rounded-2xl shadow-lg border border-gray-100">
@@ -78,6 +84,7 @@ export default function TempChart({ data, style = "line" }: TempChartProps) {
   }
 
   // 🔹 Default: Classic Line Chart
+  // Default: classic line chart with axes and legend.
   return (
     <div className="p-6 bg-white rounded-2xl shadow-lg border border-gray-100">
       <h2 className="text-2xl font-semibold text-gray-800 mb-6">

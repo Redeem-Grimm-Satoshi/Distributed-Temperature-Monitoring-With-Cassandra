@@ -4,6 +4,7 @@ import { Laptop, Server, Database, Router } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function NetworkDiagram() {
+  // Animated diagram showing high-level network topology and node roles.
   return (
     <div className="p-6 bg-white rounded-2xl shadow-md border border-gray-100 flex flex-col items-center gap-6">
       <h2 className="text-xl font-semibold text-gray-800">

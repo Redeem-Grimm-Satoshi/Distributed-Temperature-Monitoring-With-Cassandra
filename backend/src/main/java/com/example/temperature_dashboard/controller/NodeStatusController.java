@@ -19,11 +19,13 @@ public class NodeStatusController {
     // Repository for NodeStatus entities
     private final NodeStatusRepository repo;
 
+    // DTO used to keep the API response small and explicit.
     public record StatusDto(String ipAddress, String nodeName, Instant lastSeen, boolean online) {}
 
     // Heartbeat endpoint
     @PostMapping("/heartbeat")
     public StatusDto heartbeat(@RequestBody NodeStatus incoming) {
+        // Persist the heartbeat and return an "online" response immediately.
         NodeStatus saved = new NodeStatus(
             incoming.getIpAddress(),
             incoming.getNodeName() != null ? incoming.getNodeName() : "Unknown",
@@ -39,6 +41,7 @@ public class NodeStatusController {
         Instant now = Instant.now();
         return repo.findAll().stream()
             .map(s -> {
+                // Consider a node online if seen within the last 10 seconds.
                 boolean online = s.getLastSeen() != null &&
                         Duration.between(s.getLastSeen(), now).toSeconds() < 10;
                 return new StatusDto(s.getIpAddress(), s.getNodeName(), s.getLastSeen(), online);
