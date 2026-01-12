@@ -30,7 +30,6 @@ type TempChartProps = {
 export default function TempChart({ data, style = "line" }: TempChartProps) {
   if (style === "area") {
     // Area chart with gradient fills for each node series.
-    // 🔹 Area Chart with gradient fills
     return (
       <div className="p-6 bg-white rounded-2xl shadow-lg border border-gray-100">
         <h2 className="text-2xl font-semibold text-gray-800 mb-6">
@@ -63,8 +62,7 @@ export default function TempChart({ data, style = "line" }: TempChartProps) {
   }
 
   if (style === "minimal") {
-    // Minimalist sparkline style for compact displays.
-    // 🔹 Minimalist sparkline style
+    // Minimalist sparkline style for compact displays
     return (
       <div className="p-6 bg-white rounded-2xl shadow-lg border border-gray-100">
         <h2 className="text-2xl font-semibold text-gray-800 mb-6">
@@ -83,7 +81,7 @@ export default function TempChart({ data, style = "line" }: TempChartProps) {
     );
   }
 
-  // 🔹 Default: Classic Line Chart
+
   // Default: classic line chart with axes and legend.
   return (
     <div className="p-6 bg-white rounded-2xl shadow-lg border border-gray-100">
