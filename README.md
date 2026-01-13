@@ -1,7 +1,7 @@
 
 <img width="1919" height="1079" alt="Screenshot 2025-09-08 125856" src="https://github.com/user-attachments/assets/81f3bbd2-b601-4c91-a6f3-9e7df63a3c7e" />
 
-# Distributed Systems Demo with Apache Cassandra & Raspberry Pi
+# Distributed Data Systems Demo with Apache Cassandra & Raspberry Pi
 
 ## 📌 Overview
 The goal of this project is to **demonstrate core distributed systems principles** -  
