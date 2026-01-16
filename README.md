@@ -65,7 +65,7 @@ Rather than relying on large cloud infrastructure, this system uses **two Raspbe
 - Shutting down one Cassandra node
 - Observing continued read/write availability
 - Watching replicas converge after node recovery
-- Monitoring latency and data consistency during failures
+- Monitoring latency and data consistency during failures/blackouts
 
 ---
 
