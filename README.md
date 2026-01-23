@@ -11,7 +11,7 @@ Rather than relying on large cloud infrastructure, this system uses **two Raspbe
 
 ---
 
-## 🎯 Key Concepts Demonstrated
+##  Key Concepts Demonstrated
 - Horizontal scaling using multiple nodes
 - Data replication with Apache Cassandra
 - Fault tolerance and node failure simulation
@@ -22,7 +22,7 @@ Rather than relying on large cloud infrastructure, this system uses **two Raspbe
 
 ---
 
-## 🏗️ System Architecture
+## System Architecture
 
 ### Components
 - **Seed Node (Raspberry Pi 1)**  
@@ -61,7 +61,7 @@ Rather than relying on large cloud infrastructure, this system uses **two Raspbe
 
 ---
 
-## 💥 Failure Scenarios Demonstrated
+##  Failure Scenarios Demonstrated
 - Shutting down one Cassandra node
 - Observing continued read/write availability
 - Watching replicas converge after node recovery
@@ -78,7 +78,7 @@ The demo showcased how **distributed systems behave under node failures**, using
 
 ---
 
-## 🚀 Why This Project Matters
+## Why This Project Matters
 Most distributed systems tutorials stop at “it works.”
 
 This project goes further:
@@ -88,7 +88,7 @@ This project goes further:
 
 ---
 
-## 📚 Technologies Used
+## Technologies Used
 - Apache Cassandra (distributed database)
 - Java + Spring Boot (REST APIs)
 - React + TypeScript (frontend dashboard)
@@ -106,7 +106,7 @@ This project goes further:
 
 ---
 
-## 🧠 Takeaway
+## Takeaway
 > Distributed systems are not about avoiding failure;  
 > they are about **continuing to function when failure is inevitable**.
 
