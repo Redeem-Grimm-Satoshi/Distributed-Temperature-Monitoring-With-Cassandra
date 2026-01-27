@@ -1,6 +1,13 @@
 
 <img width="1919" height="1079" alt="Screenshot 2025-09-08 125856" src="https://github.com/user-attachments/assets/81f3bbd2-b601-4c91-a6f3-9e7df63a3c7e" />
 
+<div align="center">
+  <img src="assets/hero-boot-pro.svg" width="100%" />
+  <br/>
+  <img src="assets/cassandra-2node-splash.svg" width="100%" />
+</div>
+
+
 # Distributed Systems Demo with Apache Cassandra & 2 Raspberry Pis
 
 ## 📌 Overview
