@@ -1,0 +1,170 @@
+<!-- Save as: assets/cassandra-2node-splash.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320">
+  <defs>
+    <linearGradient id="neon" x1="0" x2="1">
+      <stop offset="0" stop-color="#00F7FF"/>
+      <stop offset="0.55" stop-color="#B400FF"/>
+      <stop offset="1" stop-color="#FF2BD6"/>
+    </linearGradient>
+
+    <radialGradient id="bgGlow" cx="50%" cy="38%" r="85%">
+      <stop offset="0" stop-color="#0B1B2A" stop-opacity="1"/>
+      <stop offset="1" stop-color="#070A12" stop-opacity="1"/>
+    </radialGradient>
+
+    <filter id="glow" x="-60%" y="-80%" width="220%" height="260%">
+      <feGaussianBlur stdDeviation="3.2" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="2.0" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <style>
+      .bg { fill:url(#bgGlow); }
+      .frame { fill: rgba(255,255,255,0.02); stroke: rgba(0,247,255,0.25); stroke-width: 1.2; }
+      .grid { stroke: rgba(255,255,255,0.045); stroke-width: 1; }
+      .scan { opacity: 0.10; }
+      .mono { font: 650 13px "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; }
+      .tag { fill: rgba(0,247,255,0.60); }
+      .log { fill: rgba(215,249,255,0.82); }
+      .ok  { fill: #00F7FF; filter:url(#glow); }
+      .warn{ fill: #FF2BD6; filter:url(#glow); }
+      .ring { stroke: rgba(0,247,255,0.25); stroke-width: 3; fill: none; }
+      .link { stroke: url(#neon); stroke-width: 2.6; fill: none; filter:url(#glow); }
+      .nodeA { fill: rgba(0,247,255,0.09); stroke: rgba(0,247,255,0.45); stroke-width: 1.2; }
+      .nodeB { fill: rgba(180,0,255,0.10); stroke: rgba(255,43,214,0.55); stroke-width: 1.2; }
+      .nTxt { font: 800 12px "JetBrains Mono", ui-monospace, monospace; fill: rgba(215,249,255,0.80); }
+      .sub { font: 600 11px "JetBrains Mono", ui-monospace, monospace; fill: rgba(215,249,255,0.62); }
+      .pkt { fill:#00F7FF; filter:url(#glow); }
+      .pkt2{ fill:#FF2BD6; filter:url(#glow); }
+      .card { fill: rgba(255,255,255,0.03); stroke: rgba(180,0,255,0.35); stroke-width: 1; }
+      .barBG { fill: rgba(255,255,255,0.04); stroke: rgba(0,247,255,0.22); stroke-width: 1; }
+      .barFill { fill: url(#neon); filter:url(#glow); }
+    </style>
+
+    <!-- Packet orbit paths -->
+    <path id="ringPath"  d="M860 178 A92 92 0 1 1 859.9 178" fill="none"/>
+    <path id="ringPath2" d="M952 178 A92 92 0 1 1 951.9 178" fill="none"/>
+
+    <!-- Progress bar clip -->
+    <clipPath id="clipBar">
+      <rect x="54" y="274" width="0" height="10" rx="5">
+        <animate attributeName="width" values="0;420" dur="3.6s" begin="0.3s" repeatCount="indefinite"/>
+      </rect>
+    </clipPath>
+  </defs>
+
+  <!-- Background -->
+  <rect class="bg" x="0" y="0" width="1200" height="320" rx="18"/>
+
+  <!-- Grid -->
+  <g opacity="0.7">
+    <path class="grid" d="M40 60 H1160"/>
+    <path class="grid" d="M40 100 H1160"/>
+    <path class="grid" d="M40 140 H1160"/>
+    <path class="grid" d="M40 180 H1160"/>
+    <path class="grid" d="M40 220 H1160"/>
+    <path class="grid" d="M40 260 H1160"/>
+    <path class="grid" d="M140 24 V296"/>
+    <path class="grid" d="M340 24 V296"/>
+    <path class="grid" d="M540 24 V296"/>
+    <path class="grid" d="M740 24 V296"/>
+    <path class="grid" d="M940 24 V296"/>
+  </g>
+
+  <!-- Frame -->
+  <rect class="frame" x="22" y="18" width="1156" height="284" rx="16"/>
+
+  <!-- Scanline -->
+  <rect class="scan" x="22" y="26" width="1156" height="10" fill="#00F7FF">
+    <animate attributeName="y" values="26;296;26" dur="7.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.10;0.03;0.10" dur="7.5s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Header -->
+  <text class="mono tag" x="42" y="44">CASSANDRA://2-NODE • TOPOLOGY=TOKEN • RF=2 • CL=QUORUM (2/2)</text>
+
+  <!-- Left: mini boot logs -->
+  <g>
+    <rect class="card" x="42" y="62" width="620" height="200" rx="14" filter="url(#soft)"/>
+    <text class="mono tag" x="60" y="86">PI CLUSTER BOOT</text>
+
+    <text class="mono log" x="60" y="116">&gt; seeds contacted: N1…</text>
+    <text class="mono ok"  x="290" y="116">OK</text>
+
+    <text class="mono log" x="60" y="140">&gt; join ring: N2…</text>
+    <text class="mono ok"  x="250" y="140">OK</text>
+
+    <text class="mono log" x="60" y="164">&gt; vnodes enabled • token ranges split…</text>
+    <text class="mono ok"  x="430" y="164">OK</text>
+
+    <text class="mono log" x="60" y="188">&gt; replication factor set to 2…</text>
+    <text class="mono ok"  x="380" y="188">OK</text>
+
+    <text class="mono log" x="60" y="212">&gt; consistency QUORUM requires 2/2 acks…</text>
+    <text class="mono ok"  x="520" y="212">OK</text>
+
+    <text class="sub" x="60" y="240">2 nodes = great lab for partitioning, hinted handoff, repair, compaction</text>
+  </g>
+
+  <!-- Right: 2-node ring visual -->
+  <g>
+    <rect class="card" x="686" y="62" width="472" height="200" rx="14" filter="url(#soft)"/>
+    <text class="mono tag" x="706" y="86">TOKEN RING (2 NODES)</text>
+
+    <!-- Ring -->
+    <circle class="ring" cx="922" cy="178" r="92"/>
+
+    <!-- Node N1 at top -->
+    <circle class="nodeA" cx="922" cy="86" r="22"/>
+    <text class="nTxt" x="908" y="91">N1</text>
+    <text class="sub" x="888" y="112">seed • coord</text>
+
+    <!-- Node N2 at bottom -->
+    <circle class="nodeB" cx="922" cy="270" r="22"/>
+    <text class="nTxt" x="908" y="275">N2</text>
+    <text class="sub" x="892" y="296">replica</text>
+
+    <!-- Replication link (animated) -->
+    <path class="link" d="M922 108 C980 140, 980 220, 922 248" stroke-dasharray="9 11">
+      <animate attributeName="stroke-dashoffset" values="0;-170" dur="1.05s" repeatCount="indefinite"/>
+    </path>
+    <path class="link" d="M922 248 C864 220, 864 140, 922 108" stroke-dasharray="9 11">
+      <animate attributeName="stroke-dashoffset" values="0;-170" dur="1.20s" repeatCount="indefinite"/>
+    </path>
+
+    <!-- Orbiting packets -->
+    <circle class="pkt" r="5">
+      <animateMotion dur="3.0s" repeatCount="indefinite" rotate="auto">
+        <mpath href="#ringPath"/>
+      </animateMotion>
+    </circle>
+    <circle class="pkt2" r="5">
+      <animateMotion dur="2.4s" repeatCount="indefinite" rotate="auto">
+        <mpath href="#ringPath2"/>
+      </animateMotion>
+    </circle>
+
+    <!-- Mini stats -->
+    <text class="mono log" x="706" y="132">RF: 2</text>
+    <text class="mono log" x="706" y="156">CL: QUORUM</text>
+    <text class="mono log" x="706" y="180">acks needed: 2</text>
+    <text class="mono ok"  x="706" y="204">state: STABLE</text>
+  </g>
+
+  <!-- Bottom progress bar -->
+  <rect class="barBG" x="54" y="274" width="420" height="10" rx="5"/>
+  <g clip-path="url(#clipBar)">
+    <rect class="barFill" x="54" y="274" width="420" height="10" rx="5"/>
+  </g>
+  <text class="mono tag" x="486" y="282">SYNC</text>
+</svg>
