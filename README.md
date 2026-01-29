@@ -7,10 +7,10 @@
 </div>
 
 
-# Distributed Systems Demo with Apache Cassandra & 2 Raspberry Pis
+# Distributed Data Systems Demo with Apache Cassandra & 2 Raspberry Pis
 
 ## 📌 Overview
-The goal of this project is to **demonstrate core distributed systems principles** -  
+The goal of this project is to **demonstrate core distributed data systems principles** -  
 **replication, fault tolerance, eventual consistency, and observability** - using a **minimal but realistic setup**.
 
 Rather than relying on large cloud infrastructure, this system uses **two Raspberry Pis**, a real sensor, and a production-grade distributed database to show how **real-world distributed systems behave under normal operation and failure conditions**.
