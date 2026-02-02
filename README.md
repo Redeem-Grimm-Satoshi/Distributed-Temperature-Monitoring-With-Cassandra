@@ -59,7 +59,7 @@ Rather than relying on large cloud infrastructure, this system uses **two Raspbe
 
 ## 🔄 Data Flow
 1. Temperature sensor reads data on **Seed Node**
-2. Spring Boot backend receives sensor data via REST
+2. Spring Boot backend receives sensor data via REST API
 3. Data is written to **Apache Cassandra**
 4. Cassandra replicates data to the **Peer Node**
 5. Dashboard fetches and visualizes data in real time
@@ -68,7 +68,7 @@ Rather than relying on large cloud infrastructure, this system uses **two Raspbe
 ---
 
 ##  Failure Scenarios Demonstrated
-- Shutting down one Cassandra node
+- Shutting down one Cassandra node (Physically unplugging the ethernet cable from the Raspberry PI)
 - Observing continued read/write availability
 - Watching replicas converge after node recovery
 - Monitoring latency and data consistency during failures
