@@ -36,8 +36,9 @@ Rather than relying on large cloud infrastructure, this system uses **two Raspbe
   - Acts as the initial Cassandra seed node  
   - Publishes sensor data to the backend REST API  
 
-- **Peer Node (Raspberry Pi 2)**  
-  - Participates in Cassandra replication  
+- **Peer Node (Raspberry Pi 2)**
+  - Note: **Peer Node is not connected to any wired temperature sensor, only the Seed Node.**
+  - Participates in Cassandra replication (published data from seed node to Cassandra, with a Replication Factor of 2(RF=2), Data is being replicated from the Seed Node to the Peer Node)  
   - Maintains a replica of the dataset  
   - Demonstrates resilience under node failures  
 
@@ -50,7 +51,7 @@ Rather than relying on large cloud infrastructure, this system uses **two Raspbe
   - Writes sensor data to Cassandra  
   - Reads replicated data for visualization  
 
-- **React + TypeScript Dashboard**  
+- **Nextjs + Recharts + TypeScript Dashboard**  
   - Real-time data visualization  
   - Polls backend APIs  
   - Shows system behavior during failures  
@@ -80,7 +81,7 @@ This project was presented as a **live lightning talk/demo** at:
 - **Community Over Code 2025, Minneapolis, Minnesota.**
 - **PyData Boston 2025**
 
-The demo showcased how **distributed systems behave under node failures**, using real hardware, real data, and real infrastructure components.
+The demo showcased how **Distributed Data Systems behave under node failures**, using real hardware, real data, and real infrastructure components.
 
 ---
 
@@ -94,11 +95,12 @@ This project goes further:
 
 ---
 
-## Technologies Used
+## Technologies/Hardware Used
 - Apache Cassandra (distributed database)
 - Java + Spring Boot (REST APIs)
-- React + TypeScript (frontend dashboard)
-- Recharts (data visualization)
+- React/Nextjs + TypeScript (frontend dashboard)
+- Recharts (temperature data visualization)
+- HTML, TailwindCSS
 - Raspberry Pi 4 (2 nodes)
 - DS18B20 temperature sensor
 - Docker & Docker Compose
@@ -113,6 +115,6 @@ This project goes further:
 ---
 
 ## Takeaway
-> Distributed systems are not about avoiding failure;  
-> they are about **continuing to function when failure is inevitable**.
+> Distributed Data Systems are not about avoiding failure;  
+> They are about **continuing to function when failure is inevitable**.
 
