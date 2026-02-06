@@ -13,7 +13,7 @@
 The goal of this project is to **demonstrate core distributed data systems principles** -  
 **replication, fault tolerance, eventual consistency, and observability** - using a **minimal but realistic setup**.
 
-Rather than relying on large cloud infrastructure, this system uses **two Raspberry Pis**, a real sensor, and a production-grade distributed database to show how **real-world distributed systems behave under normal operation and failure conditions**.
+Rather than relying on large cloud infrastructure, this system uses **two Raspberry Pis**, a real temperature sensor, a network switch to create a private network, and a production-grade NoSQL Distributed Database to show how **real-world distributed data systems behave under normal operation and failure conditions**.
 
 ---
 
@@ -23,6 +23,7 @@ Rather than relying on large cloud infrastructure, this system uses **two Raspbe
 - Fault tolerance and node failure simulation
 - Heartbeat-based node liveness detection
 - Eventual consistency
+- Nodes communicating via a local private network
 - Separation of data plane (Cassandra) and control plane (heartbeats)
 - Observability through a real-time dashboard
 
