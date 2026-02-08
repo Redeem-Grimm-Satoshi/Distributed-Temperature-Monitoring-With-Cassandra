@@ -108,7 +108,7 @@ This project goes further:
 - DS18B20 temperature sensor
 - Docker & Docker Compose
 - Python (sensor reader & heartbeat scripts)
-- Switch & Ethernet cables
+- Network Switch & Ethernet cables
 
 ---
 
