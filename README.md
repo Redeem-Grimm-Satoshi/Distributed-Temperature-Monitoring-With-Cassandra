@@ -100,7 +100,7 @@ This project goes further:
 
 ## Technologies/Hardware Used
 - Apache Cassandra (distributed database)
-- Java + Spring Boot (REST APIs)
+- Java + lombok + Spring Boot (REST APIs)
 - React/Nextjs + TypeScript (frontend dashboard)
 - Recharts (temperature data visualization)
 - HTML, TailwindCSS
