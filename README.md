@@ -45,17 +45,20 @@ Rather than relying on large cloud infrastructure, this system uses **two Raspbe
 
 - **Apache Cassandra**  
   - Distributed, peer-to-peer NoSQL database  
-  - Handles data replication and fault tolerance  
+  - Handles data replication across nodes and fault tolerance  
 
 - **Spring Boot Backend (Java)**  
   - Exposes REST APIs  
   - Writes sensor data to Cassandra  
   - Reads replicated data for visualization  
 
-- **Nextjs + Recharts + TypeScript Dashboard**  
+- **Nextjs + Recharts + TypeScript**  
   - Real-time data visualization  
-  - Polls backend APIs  
-  - Shows system behavior during failures  
+  - Polls backend APIs and display data on a dashboard
+
+- **Network Switch**
+  - Allows all machines (Raspberry Pi 1 & Raspberry Pi 2) to exist on the same Local Area Network (LAN) and talk to each other directly using IP addresses.
+     
 
 ---
 
