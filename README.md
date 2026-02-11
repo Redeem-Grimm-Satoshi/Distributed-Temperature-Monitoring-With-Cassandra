@@ -1,5 +1,12 @@
+## Dashboard With Live Data
+---
 
 <img width="1919" height="1079" alt="Screenshot 2025-09-08 125856" src="https://github.com/user-attachments/assets/81f3bbd2-b601-4c91-a6f3-9e7df63a3c7e" />
+
+---
+## Physical Setup
+
+---
 <img width="1536" height="2048" alt="IMG_1397" src="https://github.com/user-attachments/assets/16dfe9a9-58e5-4690-963f-5aa29a12b3d5" />
 
 <div align="center">
