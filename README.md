@@ -57,6 +57,7 @@ Rather than relying on large cloud infrastructure, this system uses **two Raspbe
   - Polls backend APIs and display data on a dashboard
 
 - **Network Switch**
+  - [Why it's important!](https://drive.google.com/file/d/1nyTw7vZiWr7cqZHrakPgkuA5EpvmAGOU/view?usp=sharing)
   - Allows all machines (Raspberry Pi 1 & Raspberry Pi 2) to exist on the same Local Area Network (LAN) and talk to each other directly using IP addresses.
      
 
