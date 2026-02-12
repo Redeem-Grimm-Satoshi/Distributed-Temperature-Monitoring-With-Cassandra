@@ -71,6 +71,7 @@ Rather than relying on large cloud infrastructure, this system uses **two Raspbe
 ---
 
 ## 🔄 Data Flow
+0. [Data Flow Explained](https://drive.google.com/file/d/1foO3VHvio_q6o-bxyRESVmyODTtUlEEl/view?usp=sharing)
 1. Temperature sensor reads data on **Seed Node**
 2. Spring Boot backend receives sensor data via REST API
 3. Data is written to **Apache Cassandra**
