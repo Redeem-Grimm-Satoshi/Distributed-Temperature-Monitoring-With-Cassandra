@@ -124,7 +124,7 @@ This project goes further:
 
 ---
 
-## Diagram
+## System Architecture Diagram
 <img width="1861" height="3052" alt="Untitled diagram-2026-01-04-022042" src="https://github.com/user-attachments/assets/5750e4dc-0bcf-4efd-9613-9abe371f8736" />
 
 ---
