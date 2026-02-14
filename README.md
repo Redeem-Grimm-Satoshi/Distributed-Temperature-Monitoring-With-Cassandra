@@ -77,7 +77,7 @@ Rather than relying on large cloud infrastructure, this system uses **two Raspbe
 3. Data is written to **Apache Cassandra**
 4. Cassandra replicates data to the **Peer Node**
 5. Dashboard fetches and visualizes data in real time
-6. When a node goes down, replication and recovery behavior can be observed
+6. When a node goes down, replication and recovery behavior can be observed via the dashboard
 
 ---
 
