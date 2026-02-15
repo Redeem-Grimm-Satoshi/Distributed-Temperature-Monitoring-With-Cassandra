@@ -106,6 +106,7 @@ This project goes further:
 - It **expects failure**
 - It **embraces imperfect networks**
 - It shows how **production systems are designed to survive**, not avoid failure
+- It shows that to scale large systems, you must start small
 - It demonstrates distributed data systems principles using **physical nodes** instead of virtual ones, helping a broader audience quickly understand it.
 
 ---
