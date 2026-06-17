@@ -13,6 +13,34 @@
   <img src="assets/cassandra-2node-splash.svg" width="100%" />
 </div>
 
+---
+## Behind The Scenes
+
+---
+
+<img width="1536" height="2048" alt="IMG_0595 - Copy" src="https://github.com/user-attachments/assets/68aa0f94-aa97-4268-af0f-1e373d3530fd" />
+<img width="1536" height="2048" alt="IMG_0596 - Copy" src="https://github.com/user-attachments/assets/315c0a04-b39a-47f2-bb6b-be2feb9803ed" />
+<img width="1536" height="2048" alt="IMG_0593" src="https://github.com/user-attachments/assets/cac3b394-db82-46ff-9cdc-8fb9c25df50a" />
+<img width="1536" height="2048" alt="IMG_0594" src="https://github.com/user-attachments/assets/bd4f0b91-f7bd-4118-abe0-7974bbf444ec" />
+<img width="1536" height="2048" alt="IMG_0595" src="https://github.com/user-attachments/assets/f26330a5-8228-48f2-a4d5-b91b7c78b7b0" />
+<img width="1536" height="2048" alt="IMG_0596" src="https://github.com/user-attachments/assets/171b0939-e5ac-41ac-9a8b-b589ff671706" />
+<img width="1536" height="2048" alt="IMG_0597" src="https://github.com/user-attachments/assets/ffb2569f-5edf-4ddd-80ba-b2a2fd3ff5f0" />
+<img width="1536" height="2048" alt="IMG_0602" src="https://github.com/user-attachments/assets/e77b7723-5608-4508-a1e8-5eb4a30ec7d7" />
+<img width="1536" height="2048" alt="IMG_0593 - Copy" src="https://github.com/user-attachments/assets/07b18b7a-4aa7-4eac-a0ad-ceb97f699c81" />
+<img width="1536" height="2048" alt="IMG_0612" src="https://github.com/user-attachments/assets/4aa6915b-d4f3-4498-a49d-0ce3cc12ae53" />
+<img width="1536" height="2048" alt="IMG_0665 (1)" src="https://github.com/user-attachments/assets/524ef1d5-2560-4ede-9223-25a0484f241d" />
+
+---
+## Behind The Scenes Videos
+---
+https://drive.google.com/file/d/1UyNgWn8sqwmT4GPRIT_4VKjpDmFVvI5B/view?usp=sharing
+
+
+https://drive.google.com/file/d/1Z3awPEqrFU1lnGkn_3Az3-mSDMNwkAot/view?usp=sharing
+---
+
+
+
 
 # Distributed Data Systems Demo with Apache Cassandra & 2 Raspberry Pis
 
